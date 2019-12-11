@@ -77,8 +77,10 @@ In this step, we will reassign value of the `player` from `X` to `O` when the bo
 
 ### Instructions
 - In index.js, create a function called `play`. We will be invoking this function any time one of 9 boxes are clicked. 
+- Using the passed in parameter and `getElementById` select the box that was clicked and save it to a new variable.
 - In the `play` function, using 'getElementById', select the span in the html with the id of `player`. 
 - Every time this function runs we will want to toggle the `X` to a `O` or vise versa to signify the next player's turn.
+- At the conclusion of this step you should see that when the board is clicked, it alternates between inserting an X and an O 
 
 <details>
 <summary>
@@ -171,11 +173,11 @@ In this step, we will create an array that will keep track of the game's progres
 
 ### Instructions
 
-- Create a variable at the top of the document, outside the `play` function, that is equal to an empty array.
+- Create a variable at the top of index.js, outside the `play` function, that is assigned an empty array as its value.
 - In the `play` function, add the current player's value (`X` or `O`) to the array we defined above at the index of `clickedId`. 
     - ex. If the top left square was clicked by player `X`, we would expect `X` to be added to the array at index 0.
     - ex. If the very center square was clicked by player `O`, we would expect `O` to be added to the array at index 4.
-- `console.log` the array in your function to keep track of it's current value.
+	- `console.log` the array in your function to keep track of it's current value (use the inspector tool by right-clicking on the page and selecting "Inspect" to view your `console.log` in the Console tab).
 
 <details>
 <summary>
@@ -227,7 +229,7 @@ In this step, we will complete the logic that will determine if there is a winne
 
 - You will need to determine if there is a winner, and display the winning player to the screen using `window.alert`.
     - There are many different ways to accomplish this task. Think through and write out each step that is needed as an outline.
-    - This most straightforward approach is to check every possible winning combination.
+     - The most straightforward approach is to check every possible winning combination (this will require A LOT of if statements!)
 - If there is no winner and the board is filled with all 9 spots taken up then alert that the game was a "CAT's" game.
 
 
